@@ -12,7 +12,7 @@
     ],
     "require": {
         "php": ">=7.2",
-        "tiderjian/think-core": "*@dev"
+        "tiderjian/think-core": ">=11.32.0"
     },
     "autoload": {
         "psr-4": {
@@ -29,11 +29,5 @@
                 "Qs\\Builder\\DatePicker\\DatePickerProvider"
             ]
         }
-    },
-  "repositories": [
-    {
-      "type": "path",
-      "url": "package/tiderjian/think-core"
     }
-  ]
 }
