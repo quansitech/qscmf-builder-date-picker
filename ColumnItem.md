@@ -26,7 +26,7 @@ $builder = new \Qscmf\Builder\ListBuilder();
 $builder->addTableColumn('start_time', '开始时间', 'time', '', true);
 ```
 
-通过修改form_item的options来修改选择器的属性，设置说明如下
+设置说明如下，其余参考通用配置属性。
 
 | 参数 | 说明 | 类型 | 默认值 |
 |:---------- |:----------|:----------|:----------|
