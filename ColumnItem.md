@@ -1,26 +1,27 @@
 ## ColumnItem组件列表
 
-+ [Time](https://github.com/quansitech/qscmf-builder-date-picker/blob/master/ColumnItem.md#Time)
++ [AntdTime](https://github.com/quansitech/qscmf-builder-date-picker/blob/master/ColumnItem.md#AntdTime)
 
 
+***
 
 **若在ListBuilder中使用，通过column的value来修改组件属性值**
 ```php
 (new \Qscmf\Builder\ListBuilder())
-->addTableColumn('start_time', '开始时间', 'time', ['placeholder' => '开始时间','disabled' => false], true);
+->addTableColumn('start_time', '开始时间', 'antd_time', ['placeholder' => '开始时间','disabled' => false], true);
 
 ```
 
 **若在SubTableBuilder中使用，通过form_item的options来修改组件属性值**
 ```php
 (new \Qscmf\Builder\SubTableBuilder())
-->addFormItem('start_time', 'time',['placeholder' => '开始时间','disabled' => false]);
+->addFormItem('start_time', 'antd_time',['placeholder' => '开始时间','disabled' => false]);
 ```
 
 ***
 
 
-### Time
+### AntdTime
 ```label
 时间选择器
 ```
