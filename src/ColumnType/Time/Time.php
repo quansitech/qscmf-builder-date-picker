@@ -14,7 +14,7 @@ class Time extends \Qscmf\Builder\ColumnType\ColumnType implements \Qscmf\Builde
     }
 
     public function editBuild(&$option, $data, $listBuilder){
-        $class = $this->getSaveTargetForm();
+        $class = $this->getSaveTargetForm(). " {$option['extra_class']}";
 
         $opt = array_merge([
             'name' => $option['name'],
@@ -22,8 +22,6 @@ class Time extends \Qscmf\Builder\ColumnType\ColumnType implements \Qscmf\Builde
         ], $option['value'] ?: []);
 
         unset($opt['format']);
-
-        $option['extra_class'] && $opt['className'] = $option['extra_class'];
 
         $view = new \Think\View();
         $view->assign('class', $class);
