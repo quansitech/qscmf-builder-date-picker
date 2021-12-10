@@ -21,7 +21,6 @@ class AntdTime extends \Qscmf\Builder\ColumnType\ColumnType implements \Qscmf\Bu
             'defaultValue' => $data[$option['name']],
         ], $option['value'] ?: []);
 
-        unset($opt['format']);
         $opt['inputCls'] = $class;
 
         $view = new \Think\View();
