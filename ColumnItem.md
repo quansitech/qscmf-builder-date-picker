@@ -1,10 +1,15 @@
 ## ColumnItem组件列表
-+ [Time](https://github.com/quansitech/qscmf-builder-date-picker/blob/master/ColumnItem.md#Time)
 
 
-**若在ListBuilder中使用，通过ColumnItem的value来修改组件属性值**
+**若在ListBuilder中使用，通过column的value来修改组件属性值**
 
 **若在SubTableBuilder中使用，通过form_item的options来修改组件属性值**
+
+***
+
+
++ [Time](https://github.com/quansitech/qscmf-builder-date-picker/blob/master/ColumnItem.md#Time)
+
 
 ### Time
 ```label
