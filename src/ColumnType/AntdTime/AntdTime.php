@@ -29,7 +29,7 @@ class AntdTime extends \Qscmf\Builder\ColumnType\ColumnType implements \Qscmf\Bu
         $view->assign('gid', Str::uuid());
         $view->assign('opt', $opt);
 
-        return $view->fetch(__DIR__ . '/time.html');
+        return $view->fetch(__DIR__ . '/antd_time.html');
     }
 
     protected function formatTimeVal($value, $format = null){

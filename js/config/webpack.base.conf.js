@@ -69,10 +69,10 @@ module.exports = {
       new HtmlWebpackPlugin({
           filename: path.join(
               ROOT_PATH,
-              '../../src/ColumnType/Time',
-              'time.html'
+              '../../src/ColumnType/AntdTime',
+              'antd_time.html'
           ),
-          template: path.join(ROOT_PATH, '../template/columnType', 'time.ejs'),
+          template: path.join(ROOT_PATH, '../template/columnType', 'antd_time.ejs'),
           inject: false,
           chunks: ['time'],
           customInject: true,
