@@ -1,4 +1,3 @@
-
 ## FormItem组件列表
 + [Time](https://github.com/quansitech/qscmf-builder-date-picker/blob/master/FormItem.md#Time)
 + [TimeRange](https://github.com/quansitech/qscmf-builder-date-picker/blob/master/FormItem.md#TimeRange)
@@ -92,17 +91,3 @@ order 说明
 ->addFormItem('quarter_range', 'date_range', '季度范围','',["picker" => "quarter"])
 ->addFormItem('year_range', 'date_range', '年范围','',["picker" => "year"])
 ```
-
-***
-
-#### 以下是通用配置属性
-
-| 参数 | 说明 | 类型 | 默认值 |
-|:---------- |:----------|:----------|:----------|
-| defaultValue | 默认值 | string |  |
-| allowClear | 是否显示清除按钮 | boolean | true |
-| inputReadOnly | 设置输入框为只读 | boolean | true |
-| size | 输入框大小 | string，可选值 large I middle I small |  |
-| format | 设置日期格式 | string I [string,string] |  |
-| name | item名 | string |  |
-| disabled | 禁用 | boolean | false |
