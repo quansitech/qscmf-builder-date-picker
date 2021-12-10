@@ -22,22 +22,23 @@ const RangeHelper = {
                     break;
             }
         }
-        if (format && format.length !== 2) {
-            format = [format, format]
+
+        if (Array.isArray(format)){
+            format = format[0]
         }
 
         return format;
     },
 
     initDefaultValue:(defaultValue, format) => {
-        return defaultValue.length === 2 ? [moment(defaultValue[0], format[0]), moment(defaultValue[1], format[1])] : null;
+        return defaultValue.length === 2 ? [moment(defaultValue[0], format), moment(defaultValue[1], format)] : null;
     },
     joinHiddenValueWithSep:(value, valueSeparator) =>{
         return value.join(valueSeparator);
     },
 
     initHiddenDefaultValue:(defaultValue, format, valueSeparator) =>{
-        return defaultValue ? RangeHelper.joinHiddenValueWithSep([defaultValue[0].format(format[0]), defaultValue[1].format(format[1])], valueSeparator) : null
+        return defaultValue ? RangeHelper.joinHiddenValueWithSep([defaultValue[0].format(format), defaultValue[1].format(format)], valueSeparator) : null
     },
 
 }

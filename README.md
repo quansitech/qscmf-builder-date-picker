@@ -22,6 +22,6 @@ composer require quansitech/qscmf-builder-date-picker
 | allowClear | 是否显示清除按钮 | boolean | true |
 | inputReadOnly | 设置输入框为只读 | boolean | true |
 | size | 输入框大小 | string，可选值 large I middle I small |  |
-| format | 设置日期格式 | string I [string,string] |  |
+| format | 设置日期格式 | string |  |
 | name | item名 | string |  |
 | disabled | 禁用 | boolean | false |

@@ -14,7 +14,7 @@ function QaDateRangePicker(props){
     const defaultFormat = RangeHelper.resetFormatWithPickerType(props.format, props.picker, props.showTime)
     const defaultValue = RangeHelper.initDefaultValue(props.defaultValue, defaultFormat);
     const [hiddenInputValue, setHiddenInputValue] = useState( RangeHelper.initHiddenDefaultValue(defaultValue, defaultFormat, props.valueSeparator) )
-    const onChange = (date, dateArr) => { console.log(RangeHelper.joinHiddenValueWithSep(dateArr, props.valueSeparator)); setHiddenInputValue(RangeHelper.joinHiddenValueWithSep(dateArr, props.valueSeparator))}
+    const onChange = (date, dateArr) => {setHiddenInputValue(RangeHelper.joinHiddenValueWithSep(dateArr, props.valueSeparator))}
 
     return (
         <div>
