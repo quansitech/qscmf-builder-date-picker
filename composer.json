@@ -1,0 +1,39 @@
+{
+    "name": "quansitech/qscmf-bulider-date-picker",
+    "description": "antd qscmf builder item datepicker",
+    "type": "library",
+    "keywords": ["qscmf", "component", "antd", "builder", "datepicker"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "xhiny",
+            "email": "axhiny@163.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "tiderjian/think-core": "*@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "FormItem\\DatePicker\\": "src/FormType/",
+            "ColumnItem\\DatePicker\\": "src/ColumnType/",
+            "Qs\\Builder\\DatePicker\\": "src/"
+        }
+    },
+    "extra": {
+        "qscmf": {
+            "providers": [
+                "FormItem\\DatePicker\\DatePickerProvider",
+                "ColumnItem\\DatePicker\\DatePickerProvider",
+                "Qs\\Builder\\DatePicker\\DatePickerProvider"
+            ]
+        }
+    },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "package/tiderjian/think-core"
+    }
+  ]
+}
