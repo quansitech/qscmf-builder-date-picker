@@ -1,11 +1,11 @@
 <?php
-namespace ColumnItem\DatePicker\Time;
+namespace ColumnItem\DatePicker\AntdTime;
 
 
 use Illuminate\Support\Str;
 use Qscmf\Builder\ButtonType\Save\TargetFormTrait;
 
-class Time extends \Qscmf\Builder\ColumnType\ColumnType implements \Qscmf\Builder\ColumnType\EditableInterface
+class AntdTime extends \Qscmf\Builder\ColumnType\ColumnType implements \Qscmf\Builder\ColumnType\EditableInterface
 {
     use TargetFormTrait;
 
@@ -17,14 +17,14 @@ class Time extends \Qscmf\Builder\ColumnType\ColumnType implements \Qscmf\Builde
         $class = $this->getSaveTargetForm(). " {$option['extra_class']}";
 
         $opt = array_merge([
-            'name' => $option['name'],
+            'name' => $option['name'].'[]',
             'defaultValue' => $data[$option['name']],
         ], $option['value'] ?: []);
 
         unset($opt['format']);
+        $opt['inputCls'] = $class;
 
         $view = new \Think\View();
-        $view->assign('class', $class);
         $view->assign('extra_arr', $option['extra_arr']);
         $view->assign('gid', Str::uuid());
         $view->assign('opt', $opt);

@@ -7,8 +7,6 @@ import locale from 'antd/es/date-picker/locale/zh_CN';
 import Utils from './utils';
 
 import 'antd/dist/antd.css';
-// import 'antd/lib/time-picker/style/index.css';
-// import './index.css';
 
 function QaTimePicker(props){
     const defaultValue = props.defaultValue ? moment(props.defaultValue, props.format) : null;
@@ -21,6 +19,7 @@ function QaTimePicker(props){
                 type={ "hidden" }
                 name={ props.name }
                 value={ hiddenInputValue }
+                className={ props.inputCls }
             />
             <TimePicker
                 onChange = { onChange }
@@ -47,6 +46,7 @@ function qaTimePicker(id, opt){
         format: "HH:mm:ss",
         name: "",
         disabled: false,
+        inputCls: '',
     };
     Object.assign(defaultOpt, opt);
 
@@ -60,6 +60,7 @@ function qaTimePicker(id, opt){
             size = { defaultOpt.size }
             format = { defaultOpt.format }
             disabled = { defaultOpt.disabled }
+            inputCls = { defaultOpt.inputCls }
         />,
         document.getElementById(id),
     );

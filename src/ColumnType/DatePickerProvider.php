@@ -3,13 +3,13 @@ namespace ColumnItem\DatePicker;
 
 use Bootstrap\Provider;
 use Bootstrap\RegisterContainer;
-use ColumnItem\DatePicker\Time\Time;
+use ColumnItem\DatePicker\AntdTime\AntdTime;
 
 class DatePickerProvider implements Provider {
 
     public function register(){
 
-        RegisterContainer::registerListColumnType('time', Time::class);
+        RegisterContainer::registerListColumnType('antd_time', AntdTime::class);
 
     }
 }
